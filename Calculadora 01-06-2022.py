@@ -1,25 +1,25 @@
-from tkinter import *
+from tkinter import * 
 #back-end
 def zero():
-    in0['text'] = '0'
+    in0['text'] = in0['text']+'0'
 def um():
-    in0['text'] = '1'
+    in0['text'] = in0['text']+'1'
 def dois():
-    in0['text'] = '2'
+    in0['text'] = in0['text']+'2'
 def tres():
-    in0['text'] = '3'
+    in0['text'] = in0['text']+'3'
 def quatro():
-    in0['text'] = '4'
+    in0['text'] = in0['text']+'4'
 def cinco():
-    in0['text'] = '5'
+    in0['text'] = in0['text']+'5'
 def seis():
-    in0['text'] = '6'
+    in0['text'] = in0['text']+'6'
 def sete():
-    in0['text'] = '7'
+    in0['text'] = in0['text']+'7'
 def oito():
-    in0['text'] = '8'
+    in0['text'] = in0['text']+'8'
 def nove():
-    in0['text'] = '9'
+    in0['text'] = in0['text']+'9'
 #front-end
 root = Tk()
 root.grid_rowconfigure(0, weight=1)
