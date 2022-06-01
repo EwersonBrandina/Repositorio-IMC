@@ -2,9 +2,12 @@ from tkinter import *
 
 #back-end
 def calcular():
-    if in1.get().isnumeric() and in2.get().isnumeric():
+    if in1.get().replace('.','',1).isdigit() and in2.get().replace('.','',1).isdigit():
         x=float(in1.get())/(float(in2.get())**2)
         lb3['text'] = x
+    #if in1.get().isnumeric() and in2.get().isnumeric():
+    #    x=float(in1.get())/(float(in2.get())**2)
+    #    lb3['text'] = x
     else:
         lb3['text'] = 'Erro!!!'
 
