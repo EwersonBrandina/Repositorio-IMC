@@ -3,11 +3,20 @@ from tkinter import *
 #back-end
 def calcular():
     if in1.get().replace('.','',1).isdigit() and in2.get().replace('.','',1).isdigit():
-        x=float(in1.get())/(float(in2.get())**2)
+        x=round(float(in1.get())/(float(in2.get())**2),2)
         lb3['text'] = x
-    #if in1.get().isnumeric() and in2.get().isnumeric():
-    #    x=float(in1.get())/(float(in2.get())**2)
-    #    lb3['text'] = x
+        if x <= 18.5:
+            lb4['text'] = 'Abaixo do Peso'
+        elif x >= 18.6 and x <= 24.9:
+            lb4['text'] = 'Saudável'
+        elif x >= 25 and x <= 29.9:
+            lb4['text'] = 'Peso em Excesso'
+        elif x >= 30 and x <= 34.9:
+            lb4['text'] = 'Obesidade Grau I'
+        elif x >= 35 and x <= 39.9:
+            lb4['text'] = 'Obesidade Grau II'
+        elif x >= 40:
+            lb4['text'] = 'Obesidade Grau III'
     else:
         lb3['text'] = 'Erro!!!'
 
@@ -30,7 +39,7 @@ in1 = Entry (root, font= 'Arial 25')
 in2 = Entry (root, font= 'Arial 25')
 bt1 = Button (root, text='Calcular', font= 'Arial 25', command=calcular)
 lb3 = Label (root, text=0.0, font= 'Arial 25')
-lb4 = Label (root, text='Interpretação do IMC', font= 'Arial 25')
+lb4 = Label (root, text='Interpretação do IMC:', font= 'Arial 25')
 
 #organizar os widgets
 lb1.grid(row=0, column=0, sticky=NSEW)
